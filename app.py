@@ -17,10 +17,10 @@ def hello_world():
     data = {}
 
     if ('Due to large demand we currently have no further appointments available for the Janssen COVID-19 single dose vaccine. We will open appointments again as soon as more stock becomes available.')  in (soup.text):
-        data['output_str'] = ('Appointments available')
+        data['output_str'] = ('true')
 
     else:
-        data['output_str'] = ('NULL')
+        data['output_str'] = ('false')
 
     
     json_data = json.dumps(data)
